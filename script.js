@@ -64,6 +64,18 @@ t1.to(".menu", {
   },
 });
 
+t1.from(".page3 > video", {
+  width: "30%",
+  scrollTrigger: {
+    trigger: ".page3 > video",
+    scroller: "body",
+    start: "top 90%",
+    end: "top 10%",
+    scrub: 2,
+    // markers: true,
+  },
+});
+
 var elemets = document.querySelectorAll(".page1-elem");
 var cursor = document.querySelectorAll(".cursor");
 console.log(cursor);
