@@ -2,10 +2,161 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #2a2a2a;
 }
 
 body,
 html {
   width: 100%;
   height: 100%;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0;
+  font-family: gilroy;
+  overflow: hidden;
+}
+
+.page1 {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+nav {
+  padding: 0 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  z-index: 9;
+  overflow: hidden;
+}
+
+nav h3,
+nav h2 {
+  font-weight: 500;
+  font-size: 0.8vw;
+}
+
+.nav-right {
+  display: flex;
+  gap: 5vw;
+}
+
+.menu {
+  /* display: none; */
+  position: absolute;
+  right: 2%;
+  opacity: 0;
+  font-size: 0.9vw;
+}
+
+.page1-text {
+  margin-top: 6vw;
+  position: relative;
+  padding: 0 2vw;
+}
+
+.page1-text > h1 {
+  font-size: 6vw;
+  font-weight: 500;
+  line-height: 0.9;
+  width: 80%;
+}
+
+.page1-text > h6 {
+  font-weight: 500;
+  width: 10%;
+  margin-top: 1vw;
+}
+
+.page1-box {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  margin-top: 4vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.page1-elem {
+  position: relative;
+  height: 100%;
+  width: 23%;
+}
+
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.3vw;
+  background-color: #2a2a2a;
+  z-index: 9;
+  /* transition: all ease 0.3s; */
+  opacity: 0;
+}
+
+.cursor h3 {
+  color: #fff;
+  font-size: 0.6vw;
+  font-weight: 500;
+}
+
+.page1-elem-img {
+  position: relative;
+  height: 85%;
+  width: 100%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  background-size: cover;
+  background-position: center;
+}
+
+.page1-elem:hover .page1-elem-img {
+  border-radius: 50%;
+}
+
+.page1-elem:nth-child(1) > .page1-elem-img {
+  background-image: url("https://dashdigital.studio/_next/static/chunks/images/CS_Fitsole_Card_w640.webp");
+}
+
+.page1-elem:nth-child(2) > .page1-elem-img {
+  background-image: url("https://dashdigital.studio/_next/static/chunks/images/CS_Lemkus_Card_w640.webp");
+}
+
+.page1-elem:nth-child(3) > .page1-elem-img {
+  background-image: url("https://dashdigital.studio/_next/static/chunks/images/CS_Sophie_Card_w640.webp");
+}
+
+.page1-elem:nth-child(4) > .page1-elem-img {
+  background-image: url("https://dashdigital.studio/_next/static/chunks/images/CS_VANA_Card_w640.webp");
+}
+
+.line {
+  width: 100%;
+  height: 0.9px;
+  background-color: black;
+  margin-top: 1vw;
+}
+
+.elem-dets {
+  display: flex;
+  justify-content: space-between;
+}
+
+.elem-dets > h6 {
+  font-weight: 500;
+  margin-top: 0.5vw;
+}
+
+.page1-elem > h3 {
+  font-weight: 500;
+  font-size: 1.2vw;
+  margin-top: 0.5vw;
 }
