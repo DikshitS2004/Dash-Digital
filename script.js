@@ -85,23 +85,57 @@ elemets.forEach(function (elem, index) {
     if (index === 0) {
       cursor[index].style.opacity = 1;
       cursor[index].style.left = dets.x + "px";
-      cursor[index].style.top = dets.y - 200 + "px";
+      cursor[index].style.top = dets.y - 80 + "px";
     } else if (index === 1) {
       cursor[index].style.opacity = 1;
       cursor[index].style.left = dets.x - 320 + "px";
-      cursor[index].style.top = dets.y - 200 + "px";
+      cursor[index].style.top = dets.y - 80 + "px";
     } else if (index === 2) {
       cursor[index].style.opacity = 1;
       cursor[index].style.left = dets.x - 630 + "px";
-      cursor[index].style.top = dets.y - 200 + "px";
+      cursor[index].style.top = dets.y - 80 + "px";
     } else if (index === 3) {
       cursor[index].style.opacity = 1;
       cursor[index].style.left = dets.x - 940 + "px";
-      cursor[index].style.top = dets.y - 200 + "px";
+      cursor[index].style.top = dets.y - 80 + "px";
     }
   });
 
   elem.addEventListener("mouseleave", function (dets) {
     cursor[index].style.opacity = 0;
+  });
+});
+
+let btn = document.querySelectorAll(".page4-btn");
+let btnTop = document.querySelectorAll(".page4-btn > button:nth-child(2)");
+let btnBottom = document.querySelectorAll(".page4-btn > button:nth-child(1)");
+
+btn.forEach(function (elem, index) {
+  elem.addEventListener("mouseenter", () => {
+    btnTop[index].innerHTML = "";
+    btnTop[index].style.padding = "0";
+    btnTop[index].style.marginLeft = ".2vw";
+    btnTop[index].style.height = "1.5vh";
+    btnTop[index].style.width = "1.5vh";
+    btnTop[index].style.boderRadius = "50%";
+  });
+
+  elem.addEventListener("mouseleave", () => {
+    btnTop[index].innerHTML = "View case study";
+    btnTop[index].style.padding = "0.2vw 0.5vw";
+    btnTop[index].style.marginLeft = "0";
+    btnTop[index].style.height = "2vh";
+    btnTop[index].style.width = "16vh";
+    btnTop[index].style.boderRadius = "2vw";
+  });
+
+  elem.addEventListener("mouseenter", () => {
+    btnBottom[index].style.opacity = 1;
+    btnBottom[index].style.width = "fit-content";
+  });
+
+  elem.addEventListener("mouseleave", () => {
+    btnBottom[index].style.opacity = 0;
+    btnBottom[index].style.width = "0%";
   });
 });
