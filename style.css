@@ -114,28 +114,17 @@ nav h2 {
   height: 85%;
   width: 100%;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+
+.page1-elem-img > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .page1-elem:hover .page1-elem-img {
   border-radius: 50%;
-}
-
-.page1-elem:nth-child(1) > .page1-elem-img {
-  background-image: url("https://dashdigital.studio/_next/static/chunks/images/CS_Fitsole_Card_w640.webp");
-}
-
-.page1-elem:nth-child(2) > .page1-elem-img {
-  background-image: url("https://dashdigital.studio/_next/static/chunks/images/CS_Lemkus_Card_w640.webp");
-}
-
-.page1-elem:nth-child(3) > .page1-elem-img {
-  background-image: url("https://dashdigital.studio/_next/static/chunks/images/CS_Sophie_Card_w640.webp");
-}
-
-.page1-elem:nth-child(4) > .page1-elem-img {
-  background-image: url("https://dashdigital.studio/_next/static/chunks/images/CS_VANA_Card_w640.webp");
 }
 
 .line {
@@ -297,4 +286,312 @@ nav h2 {
   padding: 0.2vw 0.5vw;
   padding-left: 1.4vw;
   opacity: 0;
+}
+
+.page5 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #2a2a2a;
+}
+
+.page5 > h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+}
+
+.page5 > h3 > span {
+  color: rgb(225, 67, 67);
+}
+
+.page5-top {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.page5-top > h1 {
+  font-size: 12vw;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: #000;
+}
+
+.page5-bottom {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.page5-bottom > h1 {
+  font-size: 12vw;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+}
+
+.page6 {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  margin-top: 6vw;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page7 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 2vw;
+}
+
+.page7 > h6 {
+  margin-top: 8vw;
+  font-weight: 500;
+}
+
+.page7 > h1 {
+  font-size: 6vw;
+  font-weight: 400;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.footer-left {
+  position: relative;
+  width: 50%;
+  height: 50%;
+}
+
+.footer-left > h3 {
+  font-weight: 500;
+  width: 50%;
+  line-height: 1;
+}
+
+.footer-right {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-right-elem {
+  width: 50%;
+}
+
+.footer-right-elem > h6 {
+  font-weight: 500;
+  margin-bottom: 0.5vw;
+  opacity: 0.7;
+}
+
+.footer-right-elem > h5 {
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  nav h3 {
+    font-size: 2vw;
+  }
+
+  .nav-right > h3 {
+    display: none;
+  }
+
+  .menu {
+    opacity: 1;
+    font-size: 2vw;
+  }
+
+  .page1-text {
+    margin-top: 12vw;
+  }
+
+  .page1-text > h1 {
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  .page1-text > h6 {
+    width: 100%;
+    font-size: 2vw;
+    text-align: center;
+  }
+
+  .page1-box {
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  .page1-elem {
+    margin-top: 4vw;
+    width: 40%;
+  }
+
+  .page2 {
+    height: 25vh;
+    flex-direction: column;
+    margin-top: 6vw;
+  }
+
+  .page2-left {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+  }
+
+  .page2-left-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page2-left-text > h1 {
+    font-size: 5vw;
+  }
+
+  .page2-left-text > h3 {
+    width: 80%;
+    line-height: 1.5;
+    font-size: 1.8vw;
+    text-align: center;
+  }
+
+  .page2-right {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+  }
+
+  .page2-right-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page2-right-text p {
+    font-size: 1.5vw;
+    width: 85%;
+    text-align: center;
+  }
+
+  .page2-right-text button {
+    padding: 0.5vw 1.5vw;
+    font-size: 1.5vw;
+  }
+
+  .page4-info-box {
+    flex-wrap: wrap;
+  }
+
+  .car-info {
+    height: 50%;
+    width: calc((100% / 2) - 2vw);
+  }
+
+  .car-info > p {
+    font-size: 1.8vw;
+  }
+
+  .page4-btn > button {
+    padding: 0.5vw 1.5vw;
+    font-size: 1.5vw;
+    width: 17vw;
+  }
+
+  .page5 > h3 {
+    font-size: 8vw;
+    width: 100%;
+  }
+
+  .page5-top > h1 {
+    font-size: 16vw;
+  }
+
+  .page5-bottom > h1 {
+    font-size: 16vw;
+  }
+
+  .page7 > h6 {
+    font-size: 4vw;
+  }
+
+  .page7 > h1 {
+    font-size: 10vw;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    width: 100%;
+    height: 25%;
+    margin-top: 6vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-left > h3 {
+    width: 90%;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .page4-btn {
+    margin-right: 18vw;
+  }
+
+  .footer-right {
+    width: 80%;
+  }
+
+  .footer-right-elem {
+    width: 35%;
+  }
 }

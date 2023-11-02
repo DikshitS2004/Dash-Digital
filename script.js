@@ -76,9 +76,57 @@ t1.from(".page3 > video", {
   },
 });
 
+t1.to(".page5", {
+  scrollTrigger: {
+    trigger: ".page5",
+    start: "50% 50%",
+    // markers: true,
+    pin: true,
+  },
+});
+
+t1.to(".page5-top", {
+  top: "-50%",
+  scrollTrigger: {
+    trigger: ".page5-top",
+    start: "top top",
+    // markers: true,
+    scrub: 2,
+  },
+});
+
+t1.to(".page5-top>h1", {
+  bottom: "-10%",
+  scrollTrigger: {
+    trigger: ".page5-top",
+    start: "top top",
+    // markers: true,
+    scrub: 2,
+  },
+});
+
+t1.to(".page5-bottom", {
+  bottom: "-50%",
+  scrollTrigger: {
+    trigger: ".page5-top",
+    start: "top top",
+    // markers: true,
+    scrub: 2,
+  },
+});
+
+t1.to(".page5-bottom>h1", {
+  top: "-10%",
+  scrollTrigger: {
+    trigger: ".page5-top",
+    start: "top top",
+    // markers: true,
+    scrub: 1,
+  },
+});
+
 var elemets = document.querySelectorAll(".page1-elem");
 var cursor = document.querySelectorAll(".cursor");
-console.log(cursor);
 
 elemets.forEach(function (elem, index) {
   elem.addEventListener("mousemove", function (dets) {
@@ -121,11 +169,16 @@ btn.forEach(function (elem, index) {
   });
 
   elem.addEventListener("mouseleave", () => {
-    btnTop[index].innerHTML = "View case study";
-    btnTop[index].style.padding = "0.2vw 0.5vw";
+    if (index == 4) {
+      btnTop[index].innerHTML = "Contact us";
+      btnTop[index].style.width = "12vh";
+    } else {
+      btnTop[index].innerHTML = "View case study";
+      btnTop[index].style.width = "16vh";
+    }
+    btnTop[index].style.padding = ".6vw 0.5vw";
     btnTop[index].style.marginLeft = "0";
     btnTop[index].style.height = "2vh";
-    btnTop[index].style.width = "16vh";
     btnTop[index].style.boderRadius = "2vw";
   });
 
@@ -138,4 +191,22 @@ btn.forEach(function (elem, index) {
     btnBottom[index].style.opacity = 0;
     btnBottom[index].style.width = "0%";
   });
+});
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  loop: true,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
 });
