@@ -37,93 +37,140 @@ function loco() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 }
-
 // loco();
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
+let percent = document.querySelector(".percent");
+let line = document.querySelector(".inner-line");
+let num = 0;
+
+var myInterval = setInterval(function () {
+  if (num < 80) {
+    num = num + Math.floor(Math.random() * 21);
+    percent.innerHTML = num + "%";
+    line.style.width = num + "%";
+  } else {
+    num = 100;
+    percent.innerHTML = num + "%";
+    line.style.width = num + "%";
+    start();
+    clearInterval(myInterval);
+  }
+}, 100);
+
 var t1 = gsap.timeline();
+function start() {
+  t1.to(".loder", {
+    top: "-100%",
+    delay: 0.5,
+    duration: 1,
+    ease: "power1.inOut",
+  });
 
-t1.to(".nav-right>h3", {
-  y: -50,
-  ease: "power1.inOut",
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: ".nav-right>h3",
-    scroller: "body",
-    start: "top top",
-    scrub: 1,
-  },
-});
+  t1.from(
+    ".page1",
+    {
+      opacity: 0,
+      ease: "power1.inOut",
+    },
+    "a"
+  );
 
-t1.to(".menu", {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: ".menu",
-    scroller: "body",
-    start: "top -8%",
-    scrub: 1,
-  },
-});
+  t1.from(
+    ".page1-box",
+    {
+      scale: 0.9,
+      ease: "power1.inOut",
+    },
+    "a"
+  );
 
-t1.from(".page3 > video", {
-  width: "30%",
-  scrollTrigger: {
-    trigger: ".page3 > video",
-    scroller: "body",
-    start: "top 90%",
-    end: "top 10%",
-    scrub: 2,
-    // markers: true,
-  },
-});
+  t1.to(".nav-right>h3", {
+    y: -50,
+    ease: "power1.inOut",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".nav-right>h3",
+      scroller: "body",
+      start: "top top",
+      scrub: 1,
+    },
+  });
 
-t1.to(".page5", {
-  scrollTrigger: {
-    trigger: ".page5",
-    start: "50% 50%",
-    // markers: true,
-    pin: true,
-  },
-});
+  t1.to(".menu", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".menu",
+      scroller: "body",
+      start: "top -8%",
+      scrub: 1,
+    },
+  });
 
-t1.to(".page5-top", {
-  top: "-50%",
-  scrollTrigger: {
-    trigger: ".page5-top",
-    start: "top top",
-    // markers: true,
-    scrub: 2,
-  },
-});
+  t1.from(".page3 > video", {
+    width: "30%",
+    scrollTrigger: {
+      trigger: ".page3 > video",
+      scroller: "body",
+      start: "top 90%",
+      end: "top 10%",
+      scrub: 2,
+      // markers: true,
+    },
+  });
 
-t1.to(".page5-top>h1", {
-  bottom: "-10%",
-  scrollTrigger: {
-    trigger: ".page5-top",
-    start: "top top",
-    // markers: true,
-    scrub: 2,
-  },
-});
+  t1.to(".page5", {
+    scrollTrigger: {
+      trigger: ".page5",
+      start: "50% 50%",
+      // markers: true,
+      pin: true,
+    },
+  });
 
-t1.to(".page5-bottom", {
-  bottom: "-50%",
-  scrollTrigger: {
-    trigger: ".page5-top",
-    start: "top top",
-    // markers: true,
-    scrub: 2,
-  },
-});
+  t1.to(".page5-top", {
+    top: "-50%",
+    scrollTrigger: {
+      trigger: ".page5-top",
+      start: "top top",
+      // markers: true,
+      scrub: 2,
+    },
+  });
 
-t1.to(".page5-bottom>h1", {
-  top: "-10%",
-  scrollTrigger: {
-    trigger: ".page5-top",
-    start: "top top",
-    // markers: true,
-    scrub: 1,
-  },
-});
+  t1.to(".page5-top>h1", {
+    bottom: "-10%",
+    scrollTrigger: {
+      trigger: ".page5-top",
+      start: "top top",
+      // markers: true,
+      scrub: 2,
+    },
+  });
+
+  t1.to(".page5-bottom", {
+    bottom: "-50%",
+    scrollTrigger: {
+      trigger: ".page5-top",
+      start: "top top",
+      // markers: true,
+      scrub: 2,
+    },
+  });
+
+  t1.to(".page5-bottom>h1", {
+    top: "-10%",
+    scrollTrigger: {
+      trigger: ".page5-top",
+      start: "top top",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+}
 
 var elemets = document.querySelectorAll(".page1-elem");
 var cursor = document.querySelectorAll(".cursor");
