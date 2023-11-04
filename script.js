@@ -39,10 +39,6 @@ function loco() {
 }
 // loco();
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
-
 let percent = document.querySelector(".percent");
 let line = document.querySelector(".inner-line");
 let num = 0;
@@ -180,19 +176,19 @@ elemets.forEach(function (elem, index) {
     if (index === 0) {
       cursor[index].style.opacity = 1;
       cursor[index].style.left = dets.x + "px";
-      cursor[index].style.top = dets.y - 80 + "px";
+      cursor[index].style.top = dets.y - 170 + "px";
     } else if (index === 1) {
       cursor[index].style.opacity = 1;
-      cursor[index].style.left = dets.x - 320 + "px";
-      cursor[index].style.top = dets.y - 80 + "px";
+      cursor[index].style.left = dets.x - 480 + "px";
+      cursor[index].style.top = dets.y - 120 + "px";
     } else if (index === 2) {
       cursor[index].style.opacity = 1;
-      cursor[index].style.left = dets.x - 630 + "px";
-      cursor[index].style.top = dets.y - 80 + "px";
+      cursor[index].style.left = dets.x - 930 + "px";
+      cursor[index].style.top = dets.y - 120 + "px";
     } else if (index === 3) {
       cursor[index].style.opacity = 1;
-      cursor[index].style.left = dets.x - 940 + "px";
-      cursor[index].style.top = dets.y - 80 + "px";
+      cursor[index].style.left = dets.x - 1400 + "px";
+      cursor[index].style.top = dets.y - 120 + "px";
     }
   });
 

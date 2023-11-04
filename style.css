@@ -394,7 +394,7 @@ nav h2 {
 
 .page6 {
   position: relative;
-  height: 60vh;
+  height: 40vh;
   width: 100%;
   margin-top: 6vw;
 }
@@ -406,8 +406,8 @@ nav h2 {
 }
 
 .swiper-slide {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 .swiper-slide img {
@@ -600,6 +600,15 @@ footer {
 
   .page5-bottom > h1 {
     font-size: 16vw;
+  }
+
+  .page6 {
+    height: 50vh;
+  }
+
+  .swiper-slide {
+    width: 300px;
+    height: 300px;
   }
 
   .page7 > h6 {
